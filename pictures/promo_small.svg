@@ -1,0 +1,33 @@
+<svg width="440" height="280" viewBox="0 0 440 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="background_gradient" x1="0" y1="0" x2="440" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2A8DFF"/>
+      <stop offset="1" stop-color="#0056b3"/>
+    </linearGradient>
+  </defs>
+  <rect width="440" height="280" fill="url(#background_gradient)"/>
+
+  <!-- Icon (extracted and scaled) -->
+  <g transform="translate(40, 60) scale(1.2)">
+    <!-- Target Tab (Bottom) -->
+    <path d="M24 62H92C96.4183 62 100 65.5817 100 70V104H24V62Z" fill="#FFFFFF" fill-opacity="0.8"/>
+    <rect x="32" y="72" width="12" height="4" rx="2" fill="#0056b3"/>
+
+    <!-- Arrow -->
+    <path d="M64 36L64 80" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M52 68L64 80L76 68" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Source Tab (Top) -->
+    <path d="M28 24H96C100.418 24 104 27.5817 104 32V58H28V24Z" fill="#FFFFFF" stroke="#0056b3" stroke-width="4"/>
+    <rect x="36" y="34" width="12" height="4" rx="2" fill="#0056b3"/>
+  </g>
+
+  <!-- Title Text -->
+  <text x="210" y="145" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="start" dominant-baseline="middle">
+    Tab Storage
+  </text>
+  <text x="210" y="185" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="start" dominant-baseline="middle">
+    Copier
+  </text>
+</svg>
