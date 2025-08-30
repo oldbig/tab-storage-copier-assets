@@ -45,6 +45,7 @@ The user interacts with the extension through a popup window. The workflow is as
     *   Clicking `Clear` presents a confirmation dialog with two options:
         - "Always accept" - Skip confirmation for all future clear operations
         - "Accept only for current domain and port" - Skip confirmation only for the current domain and port
+        - "Always ask confirm" - Continue to show this confirmation dialog each time (default)
     *   After confirmation (or if confirmation is skipped based on user preferences), the extension clears the selected data types from the current active tab.
     *   A status message appears below the buttons showing the result of the clear operation, confirming success or providing error details.
 
