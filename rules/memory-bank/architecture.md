@@ -68,3 +68,37 @@ The project will be organized as follows:
 4.  **Local/Session Storage:**
     *   `popup.js` uses the `chrome.scripting.executeScript` API to execute code directly in the **target (active) tab** to clear the selected storage types.
 5.  **Feedback:** `popup.js` updates the UI with a success or error message.
+
+## Profile Management Architecture
+
+### Data Structure
+
+The profile data will be stored in `chrome.storage.local` using the following structure:
+
+```json
+{
+  "profiles": [
+    {
+      "name": "Profile A",
+      "versions": [
+        {
+          "name": "Version 1",
+          "timestamp": "ISO_8601_Date_String",
+          "data": {
+            "localStorage": { "key": "value" },
+            "sessionStorage": { "key": "value" },
+            "cookies": [ { "name": "cookieName", "value": "..." } ]
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+### UI Components
+
+The following UI elements will be added to support this feature:
+
+*   "Save Profile" and "Load Profile" buttons.
+*   Modal dialogs for the save and load workflows.

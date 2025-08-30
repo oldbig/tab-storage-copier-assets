@@ -47,3 +47,35 @@ The user interacts with the extension through a popup window. The workflow is as
         - "Accept only for current domain and port" - Skip confirmation only for the current domain and port
     *   After confirmation (or if confirmation is skipped based on user preferences), the extension clears the selected data types from the current active tab.
     *   A status message appears below the buttons showing the result of the clear operation, confirming success or providing error details.
+
+## 3.1. Profile Management (State Snapshots)
+
+This feature allows users to save and load complete snapshots of a tab's storage state, including `localStorage`, `sessionStorage`, and `cookies`.
+
+1.  **Save Profile:**
+    *   The user clicks the "Save Profile" button, which opens a modal dialog.
+    *   **Profile Selection/Creation:**
+        *   The dialog displays a dropdown list of existing profiles.
+        *   If the number of profiles is less than two, an option "Create New Profile..." is available in the dropdown.
+        *   When "Create New Profile..." is selected, the dropdown transforms into a text input field.
+        *   **Validation:** The new profile name must be between 1 and 30 characters, contain only letters, numbers, underscores (`_`), and hyphens (`-`), and must not be a duplicate of an existing profile name.
+        *   The user types the desired name and presses Enter to create the profile. Upon successful creation, the UI reverts to the dropdown, with the new profile automatically selected.
+    *   **Version Management:**
+        *   The user must provide a name for the state snapshot (the "version").
+        *   Each profile can store a maximum of three versions. If this limit is reached, the user must choose to overwrite an existing version.
+    *   Upon confirmation, the extension captures the `localStorage`, `sessionStorage`, and `cookies` from the current active tab and saves the snapshot under the selected profile and version name.
+
+2.  **Load Profile:**
+    *   The user clicks the "Load Profile" button, opening a modal dialog.
+    *   The dialog displays the saved profiles and their versions.
+    *   The user selects a specific profile and version to load.
+    *   After the user confirms the action, the extension will wipe the `localStorage`, `sessionStorage`, and `cookies` of the current active tab and apply the data from the selected snapshot.
+
+3.  **Manage Profiles:**
+    *   A "Manage Profile" button will be added to the UI.
+    *   Clicking it opens a modal for profile management.
+    *   Inside the modal, a user can:
+        1.  Select a profile from a dropdown.
+        2.  Delete the entire selected profile (with a confirmation dialog) using a red 'X' button next to the dropdown.
+        3.  View a list of all versions for the selected profile.
+        4.  Delete a specific version (with a confirmation dialog) by clicking an 'X' icon next to it.

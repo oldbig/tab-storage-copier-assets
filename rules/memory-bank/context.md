@@ -1,5 +1,5 @@
 # Context
 
-- **Current work focus:** Submitting the extension to all major browser stores (Chrome, Edge, Firefox).
-- **Recent changes:** Resolved a major compatibility issue with Firefox by updating `manifest.json` to set `strict_min_version` to `109.0`. This fixed all validation warnings from Mozilla's review. Also confirmed a compliant privacy policy is ready at: https://gist.github.com/oldbig/93f32b2b8e862b1adb2a554e49ed3552
-- **Next steps:** Package the extension and re-submit it to the Firefox Add-ons store, ensuring the privacy policy link is included in the submission form. Also, proceed with submissions to Chrome and Edge stores.
+- **Current work focus:** Testing the newly implemented Profile Management feature and preparing for the next feature on the roadmap.
+- **Recent changes:** Completed the implementation of the 'Profile Management' (State Snapshots) feature. This includes UI, core logic for data capture/application, storage management via `browser.storage.local`, and a cross-browser compatibility fix for Firefox.
+- **Next steps:** Thoroughly test the Save and Load Profile functionality across Chrome, Edge, and Firefox. After successful testing, begin planning the implementation of the 'Quick Clear Tool' as outlined in the roadmap.
